@@ -9,7 +9,6 @@ import se331.rest.entity.Organizer;
 import se331.rest.repository.OrganizerRepository;
 
 import java.util.Optional;
-@Profile("prod")
 @Repository
 public class OrganizerDaoImpl implements OrganizerDao {
     @Autowired
