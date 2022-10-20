@@ -1,17 +1,15 @@
-package se331.rest.service;
+package se331.rest.entity.dao;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import se331.rest.entity.Event;
 
-public interface EventService {
+public interface EventDao {
     Integer getEventSize();
-
     Page<Event> getEvents(Integer pageSize, Integer page);
-
-    Event getEvent(Long id);
+    Event getEvents(Long id);
 
     Event save(Event event);
-    Page<Event> getEvents(String title, Pageable pageable);
-
+    Page<Event> getEvents(String name, Pageable page);
 }
+

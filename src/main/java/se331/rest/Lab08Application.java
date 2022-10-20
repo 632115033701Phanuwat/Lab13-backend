@@ -12,19 +12,16 @@ public class Lab08Application {
     public static void main(String[] args) {
         SpringApplication.run(Lab08Application.class, args);
     }
-
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:3000")
+                        .allowedOrigins("http://localhost:3000","http://3.82.204.86:8001")
                         .exposedHeaders("x-total-count");
 
             }
         };
     }
-
-
 }
